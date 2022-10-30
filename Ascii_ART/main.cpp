@@ -12,9 +12,14 @@ void affich(std::string tab[], int start, int end, int h)
 
 int main(int ac, char **av)
 {
+	if(ac !=2)
+	{
+		std::cout<<"problem in number of argument!\n";
+		exit(1);
+	}
     int l = 20;
     int h = 11;
-    std::string str = "badr";
+    std::string str = av[1];
     std::string tab[11];
     std::ifstream file;
     file.open("Art.txt");
